@@ -10,7 +10,7 @@ const obtainTeams = async () => {
 
         if (!DBTeams.length) {
             const { data } = await axios.get(`${URL}`);
-            if(!data)throw new Error('No drivers teams were found');
+            if (!data) throw new Error('No drivers teams were found');
 
             const teamsArray = [];
 

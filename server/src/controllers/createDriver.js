@@ -19,7 +19,7 @@ const createDriver = async (forename, surname, image, dob, nationality, teams, d
         surname = modifyString(surname);
         nationality = modifyString(nationality);
 
-        const duplicateValidation = await Driver.findOne({ where: {forename: forename, surname: surname, nationality: nationality, dob:dob} });
+        const duplicateValidation = await Driver.findOne({ where: { forename: forename, surname: surname, nationality: nationality, dob: dob } });
         if (duplicateValidation) throw new Error('Driver alredy exist');
 
 

@@ -51,7 +51,7 @@ const obtainDriversByName = async (name) => {
         });
 
         if (!DBDrivers.length) {
-            
+
             return getFifteenDrivers(apiDrivers);
         }
         const DBDriversWithTeams = await DBDrivers.map(driver => {
@@ -66,12 +66,12 @@ const obtainDriversByName = async (name) => {
                 dob: driver.dob,
                 teams: teamsNames,
                 description: driver.description
-    
+
             };
         })
-        
+
         const allDrivers = [...apiDrivers, ...DBDriversWithTeams];
-        return getFifteenDrivers(allDrivers);        
+        return getFifteenDrivers(allDrivers);
 
     } catch (error) {
         throw new Error(error.message);

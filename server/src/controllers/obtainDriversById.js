@@ -4,13 +4,13 @@ const { Driver, Teams } = require('../db');
 
 const obtainDriversById = async (id) => {
   try {
-    if (!isNaN(id)) {      
+    if (!isNaN(id)) {
       id = Number(id);
     }
-    
-    if(typeof id === 'number' && id  <= 508){
-      const {data} = await axios.get(`${URL}/${id}`)
-      const {name, image, dob, nationality, teams, description} = data;
+
+    if (typeof id === 'number' && id <= 508) {
+      const { data } = await axios.get(`${URL}/${id}`)
+      const { name, image, dob, nationality, teams, description } = data;
       const apiDriver = {
         id,
         forename: name.forename,
@@ -32,27 +32,27 @@ const obtainDriversById = async (id) => {
     });
 
 
-    if(driver){
-      
+    if (driver) {
+
       const teamName = await driver.Teams.map(team => team.name).join(", ");;
-      
+
       const driverWithTeams = {
         id: driver.id,
         forename: driver.forename,
         surname: driver.surname,
         image: driver.image,
-        nationality:driver.nationality,
+        nationality: driver.nationality,
         dob: driver.dob,
         teams: teamName,
-        description:driver.description    
+        description: driver.description
       };
 
       return driverWithTeams;
     }
-    
+
   } catch (error) {
     throw new Error("Driver not found")
-  }  
+  }
 };
 
 module.exports = {

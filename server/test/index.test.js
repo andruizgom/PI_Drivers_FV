@@ -11,7 +11,7 @@ describe('Test de RUTAS', () => {
             expect(response.statusCode).toBe(200);
         })
 
-        it('Responde un objeto con las propiedades: "id", "forename", "surname", "teams", "nationality", "dob" e "image"' , async () => {
+        it('Responde un objeto con las propiedades: "id", "forename", "surname", "teams", "nationality", "dob" e "image"', async () => {
             const response = await request.get('/drivers/5');
             expect(response.body).toHaveProperty("id");
             expect(response.body).toHaveProperty("forename");
@@ -23,7 +23,7 @@ describe('Test de RUTAS', () => {
             expect(response.body).toHaveProperty("description");
         })
 
-        it('Si hay un error responde con status: 500' , async () => {
+        it('Si hay un error responde con status: 500', async () => {
             const response = await request.get('/drivers/9999');
             expect(response.statusCode).toBe(500);
         })
@@ -33,7 +33,7 @@ describe('Test de RUTAS', () => {
 
         it('Agrega un driver a la base de datos', async () => {
             const driver = {
-                
+
                 forename: 'Lucas',
                 surname: 'Fittipaldi ',
                 teams: 'BMW',
@@ -41,10 +41,10 @@ describe('Test de RUTAS', () => {
                 dob: '1988-07-30',
                 image: 'https://www.eltiempo.com/files/article_main/uploads/2021/09/16/614328247390e.jpeg',
                 description: 'Un piloto de Colombia'
-             }
+            }
 
             const response = await request.post('/drivers/')
-            .send(driver);  
+                .send(driver);
             expect(response.body).toHaveProperty("id");
 
         })

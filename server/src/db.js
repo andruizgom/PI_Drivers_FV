@@ -8,8 +8,8 @@ const {
 } = process.env;
 
 const sequelize = new Sequelize(`postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/drivers`, {
-  logging: false, 
-  native: false, 
+  logging: false,
+  native: false,
 });
 const basename = path.basename(__filename);
 
@@ -29,8 +29,8 @@ let capsEntries = entries.map((entry) => [entry[0][0].toUpperCase() + entry[0].s
 sequelize.models = Object.fromEntries(capsEntries);
 
 const { Driver, Teams } = sequelize.models;
-Driver.belongsToMany(Teams, {through: 'Driver_Teams'});
-Teams.belongsToMany(Driver, {through: 'Driver_Teams'})
+Driver.belongsToMany(Teams, { through: 'Driver_Teams' });
+Teams.belongsToMany(Driver, { through: 'Driver_Teams' })
 
 // Aca vendrian las relaciones
 // Product.hasMany(Reviews);
