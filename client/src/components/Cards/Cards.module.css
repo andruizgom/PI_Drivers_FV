@@ -1,0 +1,32 @@
+.cards{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-row-gap:5vw;
+    grid-column-gap: 2vw;
+    margin-top: 2vw;
+    justify-items: center;
+    align-items: center;
+
+}
+
+.OrderAndFilter{
+    background-color: #FF0303;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: sticky;
+    top: 5.5vw;
+    z-index: 1;
+    height: 2vw;
+    border-radius: 3vw;
+    border: solid 0.2vw #4E6E81;
+}
+
+.Order, .Filter{
+    border-radius: 0.5vw;
+    background-color: #F9DBBB;
+}
+
+.filterOption{
+    font-weight: bolder;
+}

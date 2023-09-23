@@ -1,0 +1,36 @@
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 4vw;
+    background-color: #4E6E81;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+    border-radius: 0.5vw;
+}
+
+.forename, .surname, .image, .dob, .nationality, .teams, .description{
+    margin-top: 0.5vw;
+    margin-bottom: 0.2vw;
+    font-weight: bolder;
+}
+
+.forenameInput, .surnameInput, .imageInput, .dobInput, .nationalityInput, .teamsInput, .descriptionInput{
+width: 80%;
+background-color: #F9DBBB;
+}
+
+.forenameError, .surnameError, .dobError, .nationalityError, .teamsError, .descriptionError{
+    margin-top: 0.5vw;
+    margin-bottom: 0.2vw;
+    font-weight: bolder;
+    color: #FF0303;
+    margin-left: 1vw;
+    margin-right: 1vw;
+}
+
+
+.submit{
+    margin-top: 2vw;
+}

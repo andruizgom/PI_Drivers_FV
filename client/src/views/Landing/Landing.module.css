@@ -1,0 +1,55 @@
+
+.container{
+  width: 70%;
+  height: 100%;
+  z-index: 2;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.screen{
+  height: 100%;
+  width: 100%;
+  background-color: rgba(78, 110, 129, 0.5);
+  position: absolute;
+  top:0vw;
+}
+
+h1{
+  position: absolute;
+  top: 7vw;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
+  z-index: 1;
+  font-family: 'Faster One', cursive;
+  font-size: 2vw !important;
+}
+
+.Ferrari {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70vw;
+  height: 100%;
+
+}
+
+.Logo{
+  width:8vw;
+  height: 8vw;
+  z-index: 1;
+  position: relative;
+  left: 33vw;
+  top: 38vw;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.Logo:hover {
+  transform: rotate(360deg);
+}
+

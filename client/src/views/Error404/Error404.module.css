@@ -1,0 +1,15 @@
+.text404{
+    z-index: 1;
+    color:black;
+    font-size: 3vw;
+    position: absolute;
+    font-weight: bolder;
+    text-align: center;
+    left: 18vw;
+    top:10vw;
+}
+
+.image{
+    margin-top: 2vw;
+    border-radius: 1vw;
+}

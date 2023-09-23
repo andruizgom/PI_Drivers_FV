@@ -1,0 +1,34 @@
+.container{
+    display: flex;
+    flex-direction: row;
+
+
+}
+
+.image{
+    width:30vw;
+    height: 38vw;
+    margin-top: 2vw;
+    border-radius: 2vw;
+}
+
+.driverData{
+    color:#F9DBBB;
+    width: 60vw;
+    text-align: center;
+    margin-top: 2vw;
+    padding: 3vw;    
+    font-size: 0.9vw;
+}
+
+.button1{
+    background-color: #4E6E81;
+    font-family: 'Righteous', cursive;
+    margin-right: 1vw;
+}
+
+.button2{
+    background-color: #4E6E81;
+    font-family: 'Righteous', cursive;
+    margin-left: 1vw;
+}

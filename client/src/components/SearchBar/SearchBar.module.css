@@ -1,0 +1,28 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.searchBarButton {
+    background-color: #F9DBBB;
+    height: 1vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.2vw;
+    border: solid 0.1vw red;
+
+}
+
+.searchBarButton:hover {
+    border: solid 0.1vw #F9DBBB;
+}
+
+.searchBarInput {
+    background-color: #F9DBBB;
+    border-radius: 2vw;
+    text-align: center;
+    border: solid 0.1vw red;
+}
