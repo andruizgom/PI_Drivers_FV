@@ -1,9 +1,7 @@
-
-.container{
-  background-color: rgba(0, 0, 0,);  
-  background-image: linear-gradient(
-    rgba(78, 110, 129, 0.8),
-    rgba(78, 110, 129, 0.8) ), url(../../Images/Flag.png);
+.container {
+  background-color: rgba(0, 0, 0, );
+  background-image: linear-gradient(rgba(78, 110, 129, 0.8),
+      rgba(78, 110, 129, 0.8)), url(../../Images/Flag.png);
   background-position: center;
   background-size: 10vw;
   background-repeat: repeat;
@@ -15,34 +13,35 @@
   position: relative;
   margin-bottom: 3vw;
   font-family: 'Righteous', cursive;
-  
+
 }
 
 .teams {
-  color: black;    
+  color: black;
   position: absolute;
-  text-align: center; 
+  text-align: center;
   top: 27vw;
-  left:  0vw;
+  left: 0vw;
   width: 100%;
   font-size: 1.2vw;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  
+
 
 }
 
-.dob{
-  color: #FF0303;    
+.dob {
+  color: #FF0303;
   position: absolute;
-  text-align: center; 
+  text-align: center;
   top: 25vw;
   left: 6.5vw;
   font-size: 1.3vw;
 
 }
-.forename{
+
+.forename {
   color: black;
   font-weight: bolder;
   font-size: 2.4vw;
@@ -53,22 +52,23 @@
   margin: 0;
   text-align: center;
   font-family: 'Faster One', cursive;
- 
+
 }
-.forename:hover{
-  color: #F9DBBB;;
+
+.forename:hover {
+  color: #F9DBBB;
+  ;
   cursor: pointer;
 }
 
-.image{
+.image {
   width: 15vw;
   height: 18vw;
   border-radius: 3vw;
-  border: solid 0.2vw #FF0303; 
+  border: solid 0.2vw #FF0303;
   position: absolute;
-  top:17vw;
+  top: 17vw;
   left: 50%;
-  transform: translate(-50%, -50%);    
-  
-}
+  transform: translate(-50%, -50%);
 
+}

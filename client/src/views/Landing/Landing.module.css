@@ -1,5 +1,4 @@
-
-.container{
+.container {
   width: 70%;
   height: 100%;
   z-index: 2;
@@ -9,15 +8,15 @@
   transform: translate(-50%, -50%);
 }
 
-.screen{
+.screen {
   height: 100%;
   width: 100%;
   background-color: rgba(78, 110, 129, 0.5);
   position: absolute;
-  top:0vw;
+  top: 0vw;
 }
 
-h1{
+h1 {
   position: absolute;
   top: 7vw;
   left: 50%;
@@ -38,8 +37,8 @@ h1{
 
 }
 
-.Logo{
-  width:8vw;
+.Logo {
+  width: 8vw;
   height: 8vw;
   z-index: 1;
   position: relative;
@@ -52,4 +51,3 @@ h1{
 .Logo:hover {
   transform: rotate(360deg);
 }
-

@@ -1,7 +1,7 @@
-.cards{
+.cards {
     display: grid;
     grid-template-columns: auto auto auto;
-    grid-row-gap:5vw;
+    grid-row-gap: 5vw;
     grid-column-gap: 2vw;
     margin-top: 2vw;
     justify-items: center;
@@ -9,7 +9,7 @@
 
 }
 
-.OrderAndFilter{
+.OrderAndFilter {
     background-color: #FF0303;
     display: flex;
     justify-content: space-around;
@@ -22,11 +22,12 @@
     border: solid 0.2vw #4E6E81;
 }
 
-.Order, .Filter{
+.Order,
+.Filter {
     border-radius: 0.5vw;
     background-color: #F9DBBB;
 }
 
-.filterOption{
+.filterOption {
     font-weight: bolder;
 }

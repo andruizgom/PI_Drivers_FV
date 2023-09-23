@@ -53,8 +53,8 @@ const reducer = (state = initialState, action) => {
             };
 
         case UPDATED_DRIVER:
-            const update = state.driversCopy.map(driver => driver.id === action.payload.id ? action.payload : driver );
-            
+            const update = state.driversCopy.map(driver => driver.id === action.payload.id ? action.payload : driver);
+
             return {
                 ...state,
                 drivers: update,

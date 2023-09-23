@@ -1,4 +1,4 @@
-.form{
+.form {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -10,18 +10,35 @@
     border-radius: 0.5vw;
 }
 
-.forename, .surname, .image, .dob, .nationality, .teams, .description{
+.forename,
+.surname,
+.image,
+.dob,
+.nationality,
+.teams,
+.description {
     margin-top: 0.5vw;
     margin-bottom: 0.2vw;
     font-weight: bolder;
 }
 
-.forenameInput, .surnameInput, .imageInput, .dobInput, .nationalityInput, .teamsInput, .descriptionInput{
-width: 80%;
-background-color: #F9DBBB;
+.forenameInput,
+.surnameInput,
+.imageInput,
+.dobInput,
+.nationalityInput,
+.teamsInput,
+.descriptionInput {
+    width: 80%;
+    background-color: #F9DBBB;
 }
 
-.forenameError, .surnameError, .dobError, .nationalityError, .teamsError, .descriptionError{
+.forenameError,
+.surnameError,
+.dobError,
+.nationalityError,
+.teamsError,
+.descriptionError {
     margin-top: 0.5vw;
     margin-bottom: 0.2vw;
     font-weight: bolder;
@@ -31,6 +48,6 @@ background-color: #F9DBBB;
 }
 
 
-.submit{
+.submit {
     margin-top: 2vw;
 }

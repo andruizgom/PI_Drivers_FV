@@ -62,9 +62,9 @@ function Detail() {
           isNaN(id) ? <button className={style.button1} onClick={handleDelete}>Delete Driver</button> : null
         }
         {
-          isNaN(id) ?  <NavLink to={`/update/${driversByID?.id}`}><button className={style.button2}>Update Driver</button></NavLink>: null
+          isNaN(id) ? <NavLink to={`/update/${driversByID?.id}`}><button className={style.button2}>Update Driver</button></NavLink> : null
         }
-        
+
       </div>
 
     </div>

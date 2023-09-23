@@ -75,7 +75,6 @@ function Form() {
 
       <label className={style.image} html For="image">Image</label>
       <input autoComplete='off' className={style.imageInput} type="file" accept="image/*" name="image" onChange={handleChange} placeholder="Enter the link to the image" />
-      {errors.image && <p className={style.imageError}>{errors.image}</p>}
 
       <label className={style.dob} html For="dob">Date of birth</label>
       <input autoComplete='off' className={style.dobInput} type="text" name="dob" value={driverData.dob} onChange={handleChange} placeholder="Enter driver's birthdate" />
