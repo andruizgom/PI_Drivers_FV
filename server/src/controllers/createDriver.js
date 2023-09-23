@@ -53,11 +53,10 @@ const createDriver = async (forename, surname, image, dob, nationality, teams, d
         }
 
         const newDriver = await Driver.create({ forename, surname, image, dob, nationality, description });
-        const newDriverId = newDriver.id;
 
         await newDriver.addTeams(teamsId);
 
-        const relationDriverTeam = await Driver.findByPk(newDriverId, {
+        const relationDriverTeam = await Driver.findByPk(newDriver.id, {
             include: [{
                 model: Teams,
                 attributes: ['name'], //Get only the 'name' attribute from Teams.
