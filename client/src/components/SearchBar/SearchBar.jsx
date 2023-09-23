@@ -14,7 +14,7 @@ function SearchBar() {
 
    const onSearch = async (forename) => {
       try {
-         await dispatch(getDriversByName(forename));
+         dispatch(getDriversByName(forename));
       } catch (error) {
          alert("There are no drivers with that name")
       }

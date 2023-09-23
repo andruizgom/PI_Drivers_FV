@@ -38,8 +38,12 @@ function Detail() {
 
   const handleDelete = async (event) => {
     try {
-      await dispatch(deleteDriver(id));
-      navigate('/home');
+      const confirmation = window.confirm('Are you sure you want to remove the driver?');
+
+      if (confirmation) {
+        dispatch(deleteDriver(id));
+        navigate('/home');
+      }
 
     } catch (error) {
       alert("Driver could not be removed")
