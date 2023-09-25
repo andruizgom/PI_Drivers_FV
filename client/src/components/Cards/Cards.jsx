@@ -5,7 +5,7 @@ import { filterDrivers, orderDrivers } from '../../redux/actions';
 import { useLocation } from 'react-router-dom';
 
 
-function Cards({ driversToShow, teams }) {
+function Cards({ driversToShow, teams, setCurrentPage }) {
    const location = useLocation();
 
    const dispatch = useDispatch();
@@ -18,6 +18,7 @@ function Cards({ driversToShow, teams }) {
    const handleFilter = (event) => {
 
       dispatch(filterDrivers(event.target.value));
+      setCurrentPage(1)
    }
 
 

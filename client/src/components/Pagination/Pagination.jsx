@@ -9,6 +9,10 @@ function Pagination({ setCurrentPage, currentPage, totalPages }) {
         if (currentPage !== 1) setCurrentPage(currentPage - 1);
     }
 
+    if (totalPages === 0){
+        currentPage = 0;
+    }
+
     return (
         <div className={style.container}>
             <h3 className={style.pageChange} onClick={previous}>🢀 Previous </h3>

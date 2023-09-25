@@ -36,7 +36,7 @@ function Home() {
 
   return (
     <div className={style.container}>
-      <Cards driversToShow={driversToShow} teams={teams} />
+      <Cards driversToShow={driversToShow} setCurrentPage={setCurrentPage} teams={teams} />
       <Pagination setCurrentPage={setCurrentPage} currentPage={currentPage} totalPages={totalPages} />
     </div>
   )
