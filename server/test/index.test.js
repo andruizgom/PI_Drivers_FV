@@ -56,6 +56,7 @@ describe('Test de RUTAS', () => {
                 .field('description', driver.description)
                 .attach('image', imageFilePath);
             expect(response.body).toHaveProperty("id");
+            fs.unlinkSync(imageFilePath);
 
         })
 
