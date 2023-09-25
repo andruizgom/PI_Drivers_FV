@@ -30,6 +30,28 @@ describe('Test de RUTAS', () => {
         })
     })
 
+    describe('GET /teams', () => {
+
+        it('Responde con status: 200', async () => {
+            const response = await request.get('/teams');
+            expect(response.statusCode).toBe(200);
+        })
+
+        it('Responde un array de objetos cada uno con las propiedades "id" y "name"', async () => {
+            const response = await request.get('/teams');
+            expect(Array.isArray(response.body)).toBe(true)
+            response.body.forEach((team) => {
+                expect(team).toHaveProperty("id");
+                expect(team).toHaveProperty("name");
+            });
+        })
+
+        it('Si hay un error responde con status: 500', async () => {
+            const response = await request.get('/teamss');
+            expect(response.statusCode).toBe(404);
+        })
+    })
+
     describe('POST /drivers/', () => {
 
         it('Agrega un driver a la base de datos', async () => {
