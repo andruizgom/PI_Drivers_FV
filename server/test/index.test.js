@@ -1,6 +1,7 @@
 const server = require('../src/server');
 const session = require('supertest');
 const request = session(server);
+const fs = require('fs');
 
 describe('Test de RUTAS', () => {
 
@@ -32,6 +33,10 @@ describe('Test de RUTAS', () => {
     describe('POST /drivers/', () => {
 
         it('Agrega un driver a la base de datos', async () => {
+            const imageFilePath = 'C:\Users\Anderson\Desktop\Test Images\Luigi.png';
+            fs.writeFileSync(imageFilePath, 'imagen_de_prueba');
+
+
             const driver = {
 
                 forename: 'Lucas',
@@ -39,12 +44,17 @@ describe('Test de RUTAS', () => {
                 teams: 'BMW',
                 nationality: 'Colombian',
                 dob: '1988-07-30',
-                image: 'https://www.eltiempo.com/files/article_main/uploads/2021/09/16/614328247390e.jpeg',
                 description: 'Un piloto de Colombia'
             }
 
             const response = await request.post('/drivers/')
-                .send(driver);
+                .field('forename', driver.forename)
+                .field('surname', driver.surname)
+                .field('teams', driver.teams)
+                .field('nationality', driver.nationality)
+                .field('dob', driver.dob)
+                .field('description', driver.description)
+                .attach('image', imageFilePath);
             expect(response.body).toHaveProperty("id");
 
         })
