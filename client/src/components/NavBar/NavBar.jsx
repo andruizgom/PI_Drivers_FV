@@ -11,7 +11,9 @@ function NavBar() {
   return (
     <div className={style.container}>
 
-      <button className={style.button} ><NavLink className={style.navLink} to='/home'>Home</NavLink></button>
+      {
+        location.pathname !== '/home' ? <button className={style.button} ><NavLink className={style.navLink} to='/home'>Home</NavLink></button> : null
+      }
 
       {
         location.pathname !== '/form' ? <button className={style.button} ><NavLink className={style.navLink} to='/form'>Create Driver</NavLink></button> : null
