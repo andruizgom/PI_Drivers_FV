@@ -11,11 +11,12 @@ const obtainDriversById = async (id) => {
     if (typeof id === 'number' && id <= 508) {
       const { data } = await axios.get(`${URL}/${id}`)
       const { name, image, dob, nationality, teams, description } = data;
+      const placeholderImage = "https://img.remediosdigitales.com/acd470/kubica-barcelona-f1-2020/1366_2000.jpg";
       const apiDriver = {
         id,
         forename: name.forename,
         surname: name.surname,
-        image: image.url,
+        image: image.url === "" ? placeholderImage : image.url,
         dob,
         nationality,
         teams: teams,
