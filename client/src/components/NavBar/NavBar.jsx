@@ -1,6 +1,7 @@
 import style from './NavBar.module.css';
 import SearchBar from '../SearchBar/SearchBar';
 import { NavLink, useLocation } from 'react-router-dom';
+import Kart from '../../Images/Kart.png';
 
 
 
@@ -18,6 +19,8 @@ function NavBar() {
       {
         location.pathname !== '/form' ? <button className={style.button} ><NavLink className={style.navLink} to='/form'>Create Driver</NavLink></button> : null
       }
+
+      <img className={style.image} src={Kart} alt='Kart photo' />
 
       {
         location.pathname === '/home' ? <SearchBar className={style.searchBar} /> : null
